@@ -76,7 +76,7 @@ const Hero = () => {
         transition={{ type: 'tween', ease: 'backOut', duration: 0.6 }}
       />
 
-      <div className="relative items-center gap-16 lg:gap-12 grid grid-cols-1 lg:grid-cols-2 mx-auto px-6 container">
+      <div className="relative items-center gap-16 lg:gap-12 grid grid-cols-1 lg:grid-cols-2 mx-auto px-4 sm:px-6 lg:px-8 container max-w-6xl">
         
         {/* Left Side Content */}
         <div className="flex flex-col items-center lg:items-start order-2 lg:order-1 lg:pl-12 xl:pl-24 lg:text-left text-center w-full">

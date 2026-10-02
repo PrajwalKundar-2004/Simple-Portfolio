@@ -39,6 +39,13 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     font-family: 'Inter', system-ui, sans-serif;
   }
+
+  /* Standardize container max-width so full-screen 1080p/2K monitors don't over-stretch */
+  .container {
+    max-width: 72rem !important; /* 1152px (max-w-6xl) */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 /* Lenis smooth scrolling defaults */

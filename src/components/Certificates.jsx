@@ -49,7 +49,7 @@ const certificates = [
 const Certificates = () => {
   return (
     <section id="certificates" className="relative py-24 overflow-hidden">
-      <div className="z-10 relative mx-auto px-6 container">
+      <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 container max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

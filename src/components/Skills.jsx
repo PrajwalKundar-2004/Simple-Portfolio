@@ -182,7 +182,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-24 md:py-32 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
         
         {/* Section Header */}
         <motion.div
@@ -209,7 +209,7 @@ const Skills = () => {
         </motion.p>
 
         {/* Infinite Live Tech Marquee */}
-        <div className="relative w-full overflow-hidden mb-16 py-4 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+        <div className="relative w-full overflow-hidden mb-16 py-4 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
           <motion.div
             className="flex gap-6 w-max"
             animate={{ x: ['0%', '-50%'] }}

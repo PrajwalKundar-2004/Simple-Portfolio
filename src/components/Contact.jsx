@@ -46,13 +46,13 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="relative py-24 md:py-32 overflow-hidden">
-      <div className="z-10 relative mx-auto px-6 container">
+      <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 container max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
-          className="mx-auto max-w-5xl"
+          className="mx-auto w-full"
         >
           <div className="flex flex-col items-center gap-4 mb-16 text-center">
             <span className="text-accent font-mono text-sm tracking-widest uppercase">04.</span>

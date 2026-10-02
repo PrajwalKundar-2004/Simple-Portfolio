@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <section id="about" className="py-24 md:py-32 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
         
         {/* Section Header */}
         <motion.div

@@ -35,7 +35,7 @@ const Academics = () => {
 
   return (
     <section id="academics" className="py-24 relative overflow-hidden bg-black/5 dark:bg-white/[0.02]">
-      <div className="container mx-auto px-6 relative z-10" ref={containerRef}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl" ref={containerRef}>
         <div className="flex items-center gap-4 mb-20">
           <h2 className="text-4xl md:text-5xl font-bold">Academics</h2>
           <div className="h-[1px] flex-1 bg-black/10 dark:bg-white/10 mt-2"></div>

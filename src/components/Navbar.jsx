@@ -97,7 +97,7 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 md:hidden bg-white/70 dark:bg-[#050505]/70 backdrop-blur-lg border-b border-black/5 dark:border-white/5 py-4`}
       >
-        <div className="flex justify-between items-center mx-auto px-6 container">
+        <div className="flex justify-between items-center mx-auto px-4 sm:px-6 container max-w-6xl">
           <a href="#home" className="font-bold text-black dark:text-white text-xl tracking-tighter">
             Prajwal
           </a>

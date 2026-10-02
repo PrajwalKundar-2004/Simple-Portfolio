@@ -441,7 +441,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="relative py-20 md:py-28 overflow-hidden">
-      <div className="z-10 relative mx-auto px-6 container max-w-4xl">
+      <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 container max-w-4xl">
         
         {/* Main Section Header */}
         <motion.div
