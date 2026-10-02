@@ -3,11 +3,14 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const roles = [
   'Full Stack Developer',
-  'UI/UX Designer',
+  'Software Developer',
+  'Java & Spring Boot Developer',
+  'Frontend & Motion Designer',
 ];
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
   const cardRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -139,9 +142,36 @@ const Hero = () => {
           transition={{ type: 'spring', stiffness: 120, damping: 15, mass: 1 }}
           className="relative flex justify-center lg:justify-center order-1 lg:order-2 lg:pl-12"
         >
-          {/* Interactive Card Container */}
-          <div className="relative mx-auto mt-32 lg:mt-0 w-56 sm:w-64 md:w-80">
-            
+          {/* Interactive Card Container with realistic hanging pendulum & vertical bobbing */}
+          <motion.div
+            className="relative mx-auto mt-32 lg:mt-0 w-56 sm:w-64 md:w-80"
+            animate={isDragging ? { y: 0, rotate: 0 } : {
+              y: [0, 14, -3, 10, 0],
+              rotate: [-1.4, 1.6, -1.0, 1.2, -1.4],
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{
+              transformOrigin: "50% -800px",
+            }}
+          >
+            {/* Soft ground shadow that reacts to the hanging height */}
+            <motion.div
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-4/5 h-8 bg-black/15 dark:bg-black/50 rounded-full blur-xl pointer-events-none -z-10"
+              animate={isDragging ? { opacity: 0.2, scale: 0.9 } : {
+                scale: [1, 0.93, 1.05, 0.95, 1],
+                opacity: [0.35, 0.2, 0.42, 0.25, 0.35],
+              }}
+              transition={{
+                duration: 5.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+
             {/* Anchor Point: 800px above the card */}
             <div className="-top-[800px] left-1/2 z-0 absolute w-0 h-0">
               <motion.div
@@ -190,8 +220,19 @@ const Hero = () => {
               dragSnapToOrigin={true}
               dragElastic={0.4}
               dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+              onDragStart={() => setIsDragging(true)}
+              onDragEnd={() => setIsDragging(false)}
               whileDrag={{ cursor: "grabbing" }}
               style={{ x: dragX, y: dragY }}
+              animate={isDragging ? { rotateZ: 0, rotateY: 0 } : {
+                rotateZ: [-1.2, 1.4, -0.8, 1.1, -1.2],
+                rotateY: [-3, 3, -1.5, 2, -3],
+              }}
+              transition={{
+                duration: 5.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               className="z-20 relative w-full aspect-[3/4] origin-top touch-none cursor-grab rounded-[1.5rem] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] dark:shadow-[0_30px_70px_-15px_rgba(0,0,0,0.85)]"
             >
               {/* Card Body - Luxury Black in dark, White in light */}
@@ -216,7 +257,7 @@ const Hero = () => {
                 </div>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 

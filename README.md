@@ -1,4 +1,4 @@
-# Shreyas R A - Personal Portfolio
+# Prajwal Kundar - Personal Portfolio
 
 A modern, dynamic personal portfolio website built to showcase my skills, projects, academics, and certificates. Designed with a focus on clean aesthetics, smooth interactions, and high performance.
 
@@ -65,7 +65,7 @@ src/
 
 ## 📬 Contact
 
-**Shreyas R A**  
-- MERN Stack Developer | React Developer | Backend Developer | UI Designer
+**Prajwal Kundar**  
+- Full Stack Developer | React & Next.js | Python & FastAPI | Java & Spring Boot
 
-Feel free to explore the repository and use it as inspiration!
+Feel free to explore the repository!

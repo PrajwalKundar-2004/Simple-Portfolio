@@ -4,8 +4,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const academics = [
   {
     title: 'Master of Computer Applications (MCA)',
-    description: 'Vivekananda College of Engineering and Technology, Puttur\nCGPA: 8.77',
-    year: 'Aug 2026 - Present',
+    description: 'Vivekananda College of Engineering and Technology, Puttur\nCGPA: 8.73',
+    year: 'Oct 2026 - Present',
   },
   {
     title: 'Bachelor of Computer Applications (BCA)',

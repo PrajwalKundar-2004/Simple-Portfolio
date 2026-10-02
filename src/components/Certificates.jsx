@@ -10,11 +10,25 @@ const certificates = [
     image: '/Thumbnail/Generative.jpg',
   },
   {
-    title: 'Google Bootcamp H2S',
-    issuer: 'Google',
+    title: 'Build with AI Bootcamp',
+    issuer: 'Google for Developers - H2S',
     year: '2026',
     link: '/Google-Bootcamp.pdf',
     image: '/Thumbnail/Google-Bootcamp.jpg',
+  },
+  {
+    title: 'Data Analytics Job Simulation',
+    issuer: 'Deloitte, Forage',
+    year: '2026',
+    link: '/deloitte.pdf',
+    image: '/Thumbnail/deloitte.jpg',
+  },
+  {
+    title: 'Research Methodology and IPR (Elite Gold)',
+    issuer: 'VTU Belagavi',
+    year: '2026',
+    link: '/Mooc.pdf',
+    image: '/Thumbnail/Mooc.jpg',
   },
   {
     title: 'Advanced Git Concepts',
@@ -24,25 +38,11 @@ const certificates = [
     image: '/Thumbnail/Git.jpg',
   },
   {
-    title: 'MOOC Course',
-    issuer: 'Online Learning',
-    year: '2026',
-    link: '/Mooc.pdf',
-    image: '/Thumbnail/Mooc.jpg',
-  },
-  {
-    title: 'Animation Certification',
+    title: 'Web Animation Certification',
     issuer: 'Online Course',
     year: '2026',
     link: '/animation.pdf',
     image: '/Thumbnail/animation.jpg',
-  },
-  {
-    title: 'Deloitte Certification',
-    issuer: 'Deloitte',
-    year: '2026',
-    link: '/deloitte.pdf',
-    image: '/Thumbnail/deloitte.jpg',
   },
 ];
 
