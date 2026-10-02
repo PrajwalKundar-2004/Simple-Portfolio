@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiDownload, FiSend } from 'react-icons/fi';
+import { SiLeetcode } from 'react-icons/si';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -83,11 +84,12 @@ const Contact = () => {
                     prajwalkundar8746@gmail.com
                   </a>
 
-                  <div className="flex gap-4 pt-6">
+                  <div className="flex flex-wrap gap-4 pt-6">
                     <a
                       href="https://github.com/PrajwalKundar-2004"
                       target="_blank"
                       rel="noopener noreferrer"
+                      title="GitHub"
                       className="group flex justify-center items-center bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 hover:shadow-[0_0_15px_rgba(var(--accent),0.2)] border border-transparent hover:border-accent/30 rounded-full w-14 h-14 transition-all duration-300 hover:-translate-y-1"
                     >
                       <FiGithub size={22} className="text-black/60 dark:text-white/60 group-hover:text-accent transition-colors" />
@@ -96,9 +98,19 @@ const Contact = () => {
                       href="https://www.linkedin.com/in/prajwal-k-2b212b26b/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      title="LinkedIn"
                       className="group flex justify-center items-center bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 hover:shadow-[0_0_15px_rgba(var(--accent),0.2)] border border-transparent hover:border-accent/30 rounded-full w-14 h-14 transition-all duration-300 hover:-translate-y-1"
                     >
                       <FiLinkedin size={22} className="text-black/60 dark:text-white/60 group-hover:text-accent transition-colors" />
+                    </a>
+                    <a
+                      href="https://leetcode.com/u/Prajwal_Kundar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="LeetCode"
+                      className="group flex justify-center items-center bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 hover:shadow-[0_0_15px_rgba(var(--accent),0.2)] border border-transparent hover:border-accent/30 rounded-full w-14 h-14 transition-all duration-300 hover:-translate-y-1"
+                    >
+                      <SiLeetcode size={22} className="text-black/60 dark:text-white/60 group-hover:text-[#FFA116] transition-colors" />
                     </a>
 
                     <a

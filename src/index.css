@@ -61,3 +61,17 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* Hide Netlify Drawer, feedback widget, and Powered by Netlify badge */
+#netlify-badge,
+.netlify-badge,
+[data-netlify-drawer],
+#netlify-drawer-iframe,
+iframe[src*="netlify"],
+div[data-netlify-deploy-preview] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
