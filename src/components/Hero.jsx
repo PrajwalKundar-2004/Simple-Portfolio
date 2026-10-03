@@ -44,6 +44,10 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
+    // Only track pointer move on desktop with fine mouse pointer
+    if (typeof window === 'undefined' || window.matchMedia('(pointer: coarse)').matches) {
+      return;
+    }
     const handlePointerMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -61,14 +65,14 @@ const Hero = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
   };
 
   return (
     <section id="home" className="relative flex justify-center items-center pt-24 md:pt-20 min-h-screen overflow-hidden">
-      {/* Mouse Follow Glow */}
+      {/* Mouse Follow Glow (Desktop only) */}
       <motion.div
-        className="top-0 left-0 z-0 fixed bg-accent/15 dark:bg-accent/10 blur-[120px] rounded-full w-[35vw] h-[35vw] pointer-events-none"
+        className="hidden lg:block top-0 left-0 z-0 fixed bg-accent/15 dark:bg-accent/10 blur-[120px] rounded-full w-[35vw] h-[35vw] pointer-events-none"
         animate={{
           x: mousePosition.x - window.innerWidth * 0.175,
           y: mousePosition.y - window.innerWidth * 0.175,

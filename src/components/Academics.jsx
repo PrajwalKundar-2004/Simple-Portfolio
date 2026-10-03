@@ -54,10 +54,10 @@ const Academics = () => {
             {academics.map((exp, idx) => (
               <motion.div 
                 key={exp.title}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+                transition={{ duration: 0.45, delay: 0.05 }}
                 className={`relative flex flex-col md:flex-row items-start md:items-center ${
                   idx % 2 === 0 ? 'md:flex-row-reverse' : ''
                 }`}

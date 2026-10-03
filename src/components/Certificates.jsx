@@ -51,10 +51,10 @@ const Certificates = () => {
     <section id="certificates" className="relative py-24 overflow-hidden">
       <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 container max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+          transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-4 mb-16">
             <h2 className="font-bold text-4xl md:text-5xl">Certificates</h2>
@@ -68,10 +68,10 @@ const Certificates = () => {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
                 whileHover={{ y: -5 }}
                 className="group block bg-white dark:bg-[#0a0a0a] shadow-lg hover:shadow-[0_10px_30px_rgba(250,204,21,0.15)] border border-black/10 hover:border-accent/50 dark:border-white/10 rounded-2xl overflow-hidden transition-all duration-300"
               >

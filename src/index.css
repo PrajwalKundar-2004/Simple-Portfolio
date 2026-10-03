@@ -82,3 +82,34 @@ div[data-netlify-deploy-preview] {
   pointer-events: none !important;
 }
 
+/* GPU-accelerated Marquee Animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Optimize tap highlight and mobile smoothness */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+

@@ -160,16 +160,16 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.07 },
+    transition: { staggerChildren: 0.05 },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 15 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: 'easeOut' },
+    transition: { duration: 0.35, ease: 'easeOut' },
   },
 };
 
@@ -186,10 +186,10 @@ const Skills = () => {
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+          transition={{ duration: 0.5 }}
           className="flex items-center gap-6 mb-8 md:mb-12"
         >
           <span className="text-accent font-mono text-sm tracking-widest uppercase">02.</span>
@@ -199,47 +199,43 @@ const Skills = () => {
 
         {/* Section Subtext */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+          transition={{ duration: 0.5, delay: 0.05 }}
           className="text-black/60 dark:text-white/60 text-lg max-w-2xl mb-12 font-light leading-relaxed"
         >
           Technologies, frameworks, and engineering tools I leverage to build scalable, full-stack web applications and fluid interactive digital experiences.
         </motion.p>
 
-        {/* Infinite Live Tech Marquee */}
-        <div className="relative w-full overflow-hidden mb-16 py-4 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-          <motion.div
-            className="flex gap-6 w-max"
-            animate={{ x: ['0%', '-50%'] }}
-            transition={{
-              repeat: Infinity,
-              ease: 'linear',
-              duration: 28,
-            }}
-          >
+        {/* Infinite Live Tech Marquee (Hardware-accelerated CSS marquee, zero GPU thrashing) */}
+        <div className="relative w-full overflow-hidden mb-16 py-3">
+          {/* Subtle edge fade overlays without expensive CSS mask filters */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[var(--bg-primary)] to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[var(--bg-primary)] to-transparent z-10" />
+
+          <div className="animate-marquee flex gap-4 sm:gap-6">
             {[...marqueeSkills, ...marqueeSkills].map((item, idx) => {
               const Icon = item.icon;
               return (
                 <div
                   key={`${item.name}-${idx}`}
-                  className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-xs md:text-sm font-medium tracking-wide text-black/80 dark:text-white/80 shadow-sm hover:border-accent/50 transition-colors"
+                  className="flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] border border-black/10 dark:border-white/10 text-xs sm:text-sm font-medium tracking-wide text-black/80 dark:text-white/80 shadow-xs hover:border-accent/50 transition-colors shrink-0"
                 >
-                  <Icon size={18} style={{ color: item.color }} />
+                  <Icon size={18} style={{ color: item.color }} className="shrink-0" />
                   <span>{item.name}</span>
                 </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
 
         {/* Category Filter Pills */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+          transition={{ duration: 0.4 }}
           className="flex flex-wrap items-center gap-2.5 mb-14"
         >
           {categories.map((cat) => {
@@ -283,12 +279,12 @@ const Skills = () => {
                 <motion.div
                   key={category.category}
                   variants={cardVariants}
-                  whileHover={{ y: -6, scale: 1.01 }}
+                  whileHover={{ y: -4, scale: 1.01 }}
                   transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-                  className="group relative bg-white/[0.04] dark:bg-white/[0.03] backdrop-blur-xl border border-black/10 dark:border-white/10 rounded-[2rem] p-6 sm:p-7 flex flex-col justify-start h-full transition-all duration-500 hover:border-accent/50 shadow-lg hover:shadow-[0_20px_45px_-15px_rgba(var(--accent),0.25)]"
+                  className="group relative bg-white/[0.04] dark:bg-white/[0.03] backdrop-blur-md border border-black/10 dark:border-white/10 rounded-[2rem] p-6 sm:p-7 flex flex-col justify-start h-full transition-all duration-300 hover:border-accent/50 shadow-md hover:shadow-[0_20px_45px_-15px_rgba(var(--accent),0.25)]"
                 >
                   {/* Internal Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/0 group-hover:from-accent/[0.08] group-hover:to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-[2rem] pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/0 group-hover:from-accent/[0.08] group-hover:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[2rem] pointer-events-none"></div>
 
                   {/* Category Title */}
                   <div className="flex items-center gap-3 mb-5">
@@ -305,20 +301,17 @@ const Skills = () => {
                     {category.skills.map((skill) => {
                       const SkillIcon = skill.icon;
                       return (
-                        <motion.div
+                        <div
                           key={skill.name}
-                          whileHover={{ scale: 1.05, y: -2 }}
-                          whileTap={{ scale: 0.97 }}
-                          transition={{ type: 'spring', stiffness: 350, damping: 20 }}
-                          className="group/skill flex items-center gap-2 px-3.5 py-2 bg-black/[0.04] dark:bg-white/[0.05] hover:bg-black/[0.07] dark:hover:bg-white/[0.09] backdrop-blur-md rounded-xl text-xs sm:text-sm font-medium border border-black/10 dark:border-white/10 hover:border-accent/60 transition-all cursor-default text-black/80 dark:text-white/80 shadow-sm hover:shadow-[0_4px_16px_rgba(var(--accent),0.2)]"
+                          className="group/skill flex items-center gap-2 px-3.5 py-2 bg-black/[0.04] dark:bg-white/[0.05] hover:bg-black/[0.08] dark:hover:bg-white/[0.09] rounded-xl text-xs sm:text-sm font-medium border border-black/10 dark:border-white/10 hover:border-accent/60 transition-all duration-200 cursor-default text-black/80 dark:text-white/80 shadow-xs hover:-translate-y-0.5"
                         >
                           <SkillIcon
                             size={16}
                             style={{ color: skill.color }}
-                            className="shrink-0 transition-transform duration-300 group-hover/skill:scale-110"
+                            className="shrink-0 transition-transform duration-200 group-hover/skill:scale-110"
                           />
                           <span>{skill.name}</span>
-                        </motion.div>
+                        </div>
                       );
                     })}
                   </div>
@@ -330,9 +323,9 @@ const Skills = () => {
 
       </div>
       
-      {/* Decorative background glows */}
-      <div className="absolute bottom-1/4 left-0 w-[35rem] h-[35rem] bg-accent/5 rounded-full blur-[140px] -z-10 pointer-events-none -translate-x-1/2"></div>
-      <div className="absolute top-1/3 right-0 w-[30rem] h-[30rem] bg-accent/5 rounded-full blur-[140px] -z-10 pointer-events-none translate-x-1/2"></div>
+      {/* Decorative background glows (Desktop only) */}
+      <div className="hidden md:block absolute bottom-1/4 left-0 w-[35rem] h-[35rem] bg-accent/5 rounded-full blur-[140px] -z-10 pointer-events-none -translate-x-1/2"></div>
+      <div className="hidden md:block absolute top-1/3 right-0 w-[30rem] h-[30rem] bg-accent/5 rounded-full blur-[140px] -z-10 pointer-events-none translate-x-1/2"></div>
     </section>
   );
 };

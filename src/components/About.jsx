@@ -8,10 +8,10 @@ const About = () => {
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+          transition={{ duration: 0.5 }}
           className="flex items-center gap-6 mb-16 md:mb-24"
         >
           <span className="text-accent font-mono text-sm tracking-widest uppercase">01.</span>
@@ -23,10 +23,10 @@ const About = () => {
           
           {/* Left Column: Image/Visual */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="lg:col-span-5 relative group"
           >
             <div className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl transition-all duration-700 ease-out group-hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] dark:group-hover:shadow-[0_30px_70px_-15px_rgba(0,0,0,0.85)]">
@@ -39,17 +39,17 @@ const About = () => {
               <div className="absolute inset-0 border border-black/10 dark:border-white/10 rounded-[2rem] z-20 pointer-events-none" />
             </div>
             
-            {/* Abstract Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-accent/30 rounded-full blur-[2px] animate-[spin_10s_linear_infinite] -z-10" />
-            <div className="absolute -top-6 -left-6 w-24 h-24 border border-black/10 dark:border-white/10 rounded-full blur-[1px] -z-10" />
+            {/* Abstract Decorative Elements (Desktop only) */}
+            <div className="hidden sm:block absolute -bottom-6 -right-6 w-32 h-32 border border-accent/30 rounded-full blur-[2px] animate-[spin_10s_linear_infinite] -z-10" />
+            <div className="hidden sm:block absolute -top-6 -left-6 w-24 h-24 border border-black/10 dark:border-white/10 rounded-full blur-[1px] -z-10" />
           </motion.div>
 
           {/* Right Column: Content */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             className="lg:col-span-7 space-y-8"
           >
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-black/90 dark:text-white/90 leading-snug">

@@ -48,10 +48,10 @@ const Contact = () => {
     <section id="contact" className="relative py-24 md:py-32 overflow-hidden">
       <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 container max-w-5xl">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+          transition={{ duration: 0.5 }}
           className="mx-auto w-full"
         >
           <div className="flex flex-col items-center gap-4 mb-16 text-center">
