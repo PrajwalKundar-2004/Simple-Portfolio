@@ -210,10 +210,6 @@ const Skills = () => {
 
         {/* Infinite Live Tech Marquee (Hardware-accelerated CSS marquee, zero GPU thrashing) */}
         <div className="relative w-full overflow-hidden mb-16 py-3">
-          {/* Subtle edge fade overlays without expensive CSS mask filters */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[var(--bg-primary)] to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[var(--bg-primary)] to-transparent z-10" />
-
           <div className="animate-marquee flex gap-4 sm:gap-6">
             {[...marqueeSkills, ...marqueeSkills].map((item, idx) => {
               const Icon = item.icon;
