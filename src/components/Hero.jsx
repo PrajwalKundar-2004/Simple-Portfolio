@@ -247,7 +247,7 @@ const Hero = () => {
                 {/* ID Photo */}
                 <div className="z-10 relative flex-1 bg-black border border-black/10 dark:border-white/10 rounded-2xl w-full h-full overflow-hidden">
                   <img
-                    src="/Profile.png"
+                    src="/Profile.jpg"
                     alt="Prajwal"
                     className="brightness-95 grayscale w-full h-full object-cover filter contrast-125"
                   />
