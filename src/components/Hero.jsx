@@ -249,7 +249,7 @@ const Hero = () => {
                   <img
                     src="/Profile.jpg"
                     alt="Prajwal"
-                    className="brightness-95 grayscale w-full h-full object-cover filter contrast-125"
+                    className="w-full h-full object-cover transition-transform duration-500"
                   />
                 </div>
 

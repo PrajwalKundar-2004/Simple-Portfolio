@@ -30,11 +30,10 @@ const About = () => {
             className="lg:col-span-5 relative group"
           >
             <div className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl transition-all duration-700 ease-out group-hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] dark:group-hover:shadow-[0_30px_70px_-15px_rgba(0,0,0,0.85)]">
-              <div className="absolute inset-0 bg-accent/20 mix-blend-overlay z-10 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none" />
               <img 
                 src="/Profile.jpg" 
                 alt="About Prajwal" 
-                className="w-full h-full object-cover grayscale brightness-75 contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-90"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 border border-black/10 dark:border-white/10 rounded-[2rem] z-20 pointer-events-none" />
             </div>
