@@ -19,69 +19,61 @@ const About = () => {
           <div className="h-[1px] flex-1 bg-gradient-to-r from-black/10 dark:from-white/10 to-transparent"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        {/* Main Content Layout */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+          className="space-y-10"
+        >
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-black/90 dark:text-white/90 leading-snug max-w-4xl">
+            I am a passionate Full Stack Developer currently pursuing my <span className="text-accent font-medium">Master of Computer Applications (MCA)</span>.
+          </h3>
           
-          {/* Left Column: Image/Visual */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="lg:col-span-5 relative group"
-          >
-            <div className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl transition-all duration-700 ease-out group-hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] dark:group-hover:shadow-[0_30px_70px_-15px_rgba(0,0,0,0.85)]">
-              <img 
-                src="/Profile.jpg" 
-                alt="About Prajwal" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 border border-black/10 dark:border-white/10 rounded-[2rem] z-20 pointer-events-none" />
-            </div>
-            
-            {/* Abstract Decorative Elements (Desktop only) */}
-            <div className="hidden sm:block absolute -bottom-6 -right-6 w-32 h-32 border border-accent/30 rounded-full blur-[2px] animate-[spin_10s_linear_infinite] -z-10" />
-            <div className="hidden sm:block absolute -top-6 -left-6 w-24 h-24 border border-black/10 dark:border-white/10 rounded-full blur-[1px] -z-10" />
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base md:text-lg text-black/60 dark:text-white/60 font-light leading-relaxed">
+            <p>
+              I enjoy turning complex ideas into practical, scalable, and meaningful software. My journey in development is driven by curiosity, problem-solving, and a constant desire to understand how things work beneath the surface — from designing intuitive interfaces to building reliable backend systems and APIs.
+            </p>
+            <p>
+              I specialize in building modern full-stack applications using React, Node.js, Next.js, Java, Spring Boot and MongoDB, with a strong foundation in Data Structures and Algorithms. Beyond traditional web development, I am exploring AI/ML and intelligent systems to solve real-world problems.
+            </p>
+          </div>
 
-          {/* Right Column: Content */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-            className="lg:col-span-7 space-y-8"
-          >
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-black/90 dark:text-white/90 leading-snug">
-              I am a passionate Full Stack Developer currently pursuing my <span className="text-accent font-medium">Master of Computer Applications (MCA)</span>.
-            </h3>
-            
-            <div className="space-y-6 text-lg text-black/60 dark:text-white/60 font-light leading-relaxed">
-              <p>
-                I enjoy turning complex ideas into practical, scalable, and meaningful software. My journey in development is driven by curiosity, problem-solving, and a constant desire to understand how things work beneath the surface — from designing intuitive interfaces to building reliable backend systems and APIs.
-              </p>
-              <p>
-                I specialize in building modern full-stack applications using React, Node.js, Next.js, Java, Spring Boot and MongoDB, with a strong foundation in Data Structures and Algorithms. Beyond traditional web development, I am exploring AI/ML and intelligent systems, with a focus on using technology to solve real-world problems.
-              </p>
-              <p>
-                I believe great software is more than just code — it is about clean architecture, thoughtful design, performance, and solving the right problem.
-              </p>
+          {/* Engineering Pillars */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-4">
+            <div className="p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] border border-black/10 dark:border-white/10 backdrop-blur-sm">
+              <span className="text-accent font-mono text-xs uppercase tracking-wider block mb-2">01 / Architecture</span>
+              <h4 className="font-semibold text-black dark:text-white text-base mb-1">Clean & Scalable</h4>
+              <p className="text-black/60 dark:text-white/60 text-xs sm:text-sm font-light leading-relaxed">Thoughtful design patterns, modular structure, and high maintainability.</p>
             </div>
+            <div className="p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] border border-black/10 dark:border-white/10 backdrop-blur-sm">
+              <span className="text-accent font-mono text-xs uppercase tracking-wider block mb-2">02 / Full-Stack</span>
+              <h4 className="font-semibold text-black dark:text-white text-base mb-1">End-to-End Systems</h4>
+              <p className="text-black/60 dark:text-white/60 text-xs sm:text-sm font-light leading-relaxed">From fluid, responsive user interfaces to robust backend microservices.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] border border-black/10 dark:border-white/10 backdrop-blur-sm">
+              <span className="text-accent font-mono text-xs uppercase tracking-wider block mb-2">03 / Innovation</span>
+              <h4 className="font-semibold text-black dark:text-white text-base mb-1">AI & Problem Solving</h4>
+              <p className="text-black/60 dark:text-white/60 text-xs sm:text-sm font-light leading-relaxed">Strong DSA foundation combined with practical machine learning engineering.</p>
+            </div>
+          </div>
 
-            <div className="pt-8">
-              <h4 className="text-xs uppercase tracking-[0.3em] text-black/40 dark:text-white/40 mb-6 font-semibold">Core Focus</h4>
-              <div className="flex flex-wrap gap-4">
-                {['Full Stack Development', 'Backend Engineering', 'React & Node.js', 'Next.js', 'Java & Spring Boot', 'REST APIs', 'AI/ML', 'System Design'].map((item) => (
-                  <span 
-                    key={item} 
-                    className="px-6 py-3 bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-full text-sm font-medium hover:border-accent dark:hover:border-accent hover:text-accent hover:-translate-y-1 transition-all duration-300 cursor-default shadow-sm hover:shadow-[0_4px_20px_rgba(var(--accent),0.15)]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+          {/* Core Focus Pills */}
+          <div className="pt-6 border-t border-black/10 dark:border-white/10">
+            <h4 className="text-xs uppercase tracking-[0.3em] text-black/40 dark:text-white/40 mb-5 font-semibold">Core Focus</h4>
+            <div className="flex flex-wrap gap-3">
+              {['Full Stack Development', 'Backend Engineering', 'React & Node.js', 'Next.js', 'Java & Spring Boot', 'REST APIs', 'AI/ML', 'System Design'].map((item) => (
+                <span 
+                  key={item} 
+                  className="px-5 py-2.5 bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-full text-xs sm:text-sm font-medium hover:border-accent dark:hover:border-accent hover:text-accent hover:-translate-y-0.5 transition-all duration-300 cursor-default shadow-xs"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
       
       {/* Decorative Glow */}
